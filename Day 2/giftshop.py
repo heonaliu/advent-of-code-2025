@@ -36,24 +36,4 @@ for i in range(len(lines)):
                     sum += int(num)
                     
 print("Invalid IDs: " + str(invalid) + " Sum: " + str(sum))
-            
-            
-        
-    
-        
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    
-    
-        
-    
-    
-        
 
