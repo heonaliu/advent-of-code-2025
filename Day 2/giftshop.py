@@ -1,4 +1,4 @@
-f = open('/Users/heona/Documents/Projects/Programming Club - Advent/Day 2/input.txt')
+f = open('/Users/heona/Documents/Projects/Programming Club - Advent/advent-of-code-2025/Day 2/test.txt')
 
 lines = f.read().split(",")
 sum = 0
@@ -20,7 +20,16 @@ for i in range(len(lines)):
     for i in range(first, second + 1):
         if (len(str(first)) % 2 != 0 and len(str(second)) % 2 != 0):
             print("No Invalid ID")
-            break
+            
+            same_num_counter = 0
+            for j in range(len(str(first))-1):
+                current_letter = str(first)[j]
+                if (current_letter == str(first)[j+1]):
+                    same_num_counter += 1
+                    
+            if (len(str(first)) == same_num_counter):
+                print(first)
+                sum+= int(num)
         #for each number from first number to second
         else: 
             digits = int(len(str(i)))
